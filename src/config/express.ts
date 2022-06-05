@@ -1,4 +1,4 @@
-// import locationRouter from '@server/controller/operations/operations.routes';
+import operationsRouter from '@controller/operations/operations.routes';
 import errorHandler from '@middleware/errorHandler';
 import express from 'express';
 import cors from 'cors';
@@ -16,7 +16,7 @@ const createServer = (): express.Application => {
         res.send('Up');
     });
 
-  //  app.use('/', locationRouter);
+  app.use('/operator', operationsRouter);
 
     app.use(errorHandler);
 

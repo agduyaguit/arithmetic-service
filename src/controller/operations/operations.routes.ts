@@ -1,7 +1,11 @@
-// import { Router } from 'express';
-// import Auth from '@middleware/authorization';
+import { Router } from 'express';
+import operationHandler from '@controller/operations/operations.handler';
 
+const route = Router();
 
-// const router = Router();
+route.post('/addition', operationHandler.addition);
+route.post('/subtraction', operationHandler.subtraction);
+route.post('/multiplication', operationHandler.multiplication);
+route.post('/division', operationHandler.division);
 
-// router.route('*', Auth.authorize);
+export default route;

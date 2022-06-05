@@ -25,7 +25,6 @@ export default {
     '@server(.*)$': `${rootDirector}/src$1`,
     '@config(.*)$': `${rootDirector}/src/config$1`,
     '@tests(.*)$': `${rootDirector}/__tests__$1`,
-    '@domain(.*)$': `${rootDirector}/src/domain$1`,
     '@controller(.*)$': `${rootDirector}/src/controller$1`,
     '@middleware(.*)$': `${rootDirector}/src/middleware$1`,
   },
@@ -41,12 +40,12 @@ export default {
   ],
   rootDir: rootDirector,
   roots: [rootDirector],
-  setupFilesAfterEnv: [`${rootDirector}/__tests__/setup.ts`],
+  setupFilesAfterEnv: [`${rootDirector}/src/__tests__/setup.ts`],
   testPathIgnorePatterns: [
     '/node_modules/',
     '<rootDir>/build',
-    `${rootDirector}/__tests__/fixtures`,
-    `${rootDirector}/__tests__/setup.ts`,
+    `${rootDirector}/src/__tests__/fixtures`,
+    `${rootDirector}/src/__tests__/setup.ts`,
   ],
   transform: {
     '^.+\\.ts$': 'ts-jest',
