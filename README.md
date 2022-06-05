@@ -22,7 +22,7 @@ Basic arithmetic operations service
 This project is intended to be used with the latest Active LTS release of [Node.js][nodejs].
 ### Using NPM
 
-This project is using Typescript. It is recommended to install it **globally**. Run the command to create new project whenver we want
+This project is using Typescript. It is recommended to install it **globally**. Run the command to create new project whenever you want
 
 ### Cloning the Repository
 
