@@ -15,7 +15,7 @@ import http from 'http';
 const host = process.env.HOST || 'localhost';
 const port = process.env.PORT || '3000';
 
-const startServer = async () => {
+const startServer = () => {
     const app = createServer();
     const server = http.createServer(app).listen({ host, port }, () => {
         const addressInfo = server.address() as AddressInfo;
