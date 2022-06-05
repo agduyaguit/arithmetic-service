@@ -1,4 +1,4 @@
-const addition = ( addend: [] ): number  =>  {
+const addition = ( addend: Array<number> ): number  =>  {
     return addend.reduce((total: number, currentValue: number) => {
         return total + currentValue;
     }, 0);

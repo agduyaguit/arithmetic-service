@@ -27,6 +27,7 @@ export default {
     '@tests(.*)$': `${rootDirector}/__tests__$1`,
     '@controller(.*)$': `${rootDirector}/src/controller$1`,
     '@middleware(.*)$': `${rootDirector}/src/middleware$1`,
+    '@utils(.*)$': `${rootDirector}/src/utils$1`
   },
   reporters: [
     'default',
