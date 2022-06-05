@@ -1,0 +1,135 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "Arithmetic Service Document",
+      "description": "Basic Arithmetic Operations API",
+      "version": "1.0.0"
+    },
+    "servers": [
+      {
+        "url": "http://localhost:3000/operator",
+        "description": "Development Server"
+      }
+    ],
+    "paths": {
+      "/addition": {
+        "post": {
+          "summary": "Adds two or more number",
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "example": [
+                    1,
+                    2
+                  ]
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        }
+      },
+      "/subtraction": {
+        "post": {
+          "summary": "Subtract two numbers",
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "minuend": {
+                      "type": "number"
+                    },
+                    "subtrahend": {
+                      "type": "number"
+                    }
+                  },
+                  "example": {
+                    "minuend": 10,
+                    "subtrahend": 3
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        }
+      },
+      "/multiplication": {
+        "post": {
+          "summary": "Multiply two numbers",
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "multiplier": {
+                      "type": "number"
+                    },
+                    "multiplicand": {
+                      "type": "number"
+                    }
+                  },
+                  "example": {
+                    "multiplier": 10,
+                    "multiplicand": 3
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        }
+      },
+      "/division": {
+        "post": {
+          "summary": "Divide two numbers",
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "numerator": {
+                      "type": "number"
+                    },
+                    "denominator": {
+                      "type": "number"
+                    }
+                  },
+                  "example": {
+                    "numerator": 10,
+                    "denominator": 3
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        }
+      }
+    }
+  }
