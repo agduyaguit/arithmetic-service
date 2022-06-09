@@ -6,7 +6,7 @@ const route = Router();
 
 route.post('/addition', ValidateReq('body', 'AdditionOperation'), operationHandler.addition);
 route.post('/subtraction', operationHandler.subtraction);
-route.post('/multiplication', operationHandler.multiplication);
+route.post('/multiplication', ValidateReq('body', 'MultiplicationOperation'), operationHandler.multiplication);
 route.post('/division', operationHandler.division);
 
 export default route;
